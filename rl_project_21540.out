@@ -1,0 +1,1543 @@
+==========================================
+Starting Job
+Job ID: 21540
+Node: node2
+Working Dir: /home/tanmoyhazra/rl_project_24
+==========================================
+==========================================
+Environment Info
+Python: /apps/compilers/anaconda3-24.2/bin/python
+Python 3.11.7
+Conda Env: rl_project
+==========================================
+GPU Info:
+Sun Apr 12 06:24:00 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   90C    P0            272W /  400W |    8436MiB /  95830MiB |    100%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4394      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A          516061      C   python                                 3310MiB |
+|    0   N/A  N/A         2260606      C   python                                 2714MiB |
+|    0   N/A  N/A         2513426      C   python                                 1186MiB |
+|    0   N/A  N/A         3424851      C   python                                 1184MiB |
++-----------------------------------------------------------------------------------------+
+Torch CUDA Check:
+CUDA Available: True
+GPU Count: 1
+==========================================
+Starting Training...
+Using device: cuda
+Left hemisphere : 13 ch | Right hemisphere : 13 ch
+Left frontal    : 6 ch | Right frontal    : 6 ch
+Frequency bands : ['delta', 'theta', 'alpha', 'beta', 'gamma']
+=================================================================
+  FLD3QN Enhanced – Subject-Independent LOSO
+=================================================================
+  DE features   : True
+  Total steps   : 1000
+  CORAL weight  : 0.1
+  DANN weight   : 0.1
+=================================================================
+
+Loading all subjects …
+  Subject 01: 2400 windows loaded
+  Subject 02: 2400 windows loaded
+  Subject 03: 2400 windows loaded
+  Subject 04: 2400 windows loaded
+  Subject 05: 2400 windows loaded
+  Subject 06: 2400 windows loaded
+  Subject 07: 2400 windows loaded
+  Subject 08: 2400 windows loaded
+  Subject 09: 2400 windows loaded
+  Subject 10: 2400 windows loaded
+  Subject 11: 2400 windows loaded
+  Subject 12: 2400 windows loaded
+  Subject 13: 2400 windows loaded
+  Subject 14: 2400 windows loaded
+  Subject 15: 2400 windows loaded
+  Subject 16: 2400 windows loaded
+  Subject 17: 2400 windows loaded
+  Subject 18: 2400 windows loaded
+  Subject 19: 2400 windows loaded
+  Subject 20: 2400 windows loaded
+  Subject 21: 2400 windows loaded
+  Subject 22: 2400 windows loaded
+  Subject 23: 2400 windows loaded
+  Subject 24: 2400 windows loaded
+  Subject 25: 2400 windows loaded
+  Subject 26: 2400 windows loaded
+  Subject 27: 2400 windows loaded
+  Subject 28: 2400 windows loaded
+  Subject 29: 2400 windows loaded
+  Subject 30: 2400 windows loaded
+  Subject 31: 2400 windows loaded
+  Subject 32: 2400 windows loaded
+
+Total: 76800 windows from 32 subjects
+
+=================================================================
+  LOSO Fold — Test Subject: 01  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4742 | loss=0.9326
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4792 | loss=1.5334
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4792 | task=valence
+  ► Subject 01 | VALENCE test acc = 0.4792
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5967 | loss=1.3284
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5679 | loss=1.4626
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5967 | task=arousal
+  ► Subject 01 | AROUSAL test acc = 0.5967
+
+=================================================================
+  LOSO Fold — Test Subject: 02  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5425 | loss=0.8303
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5387 | loss=0.7140
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5425 | task=valence
+  ► Subject 02 | VALENCE test acc = 0.5425
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4587 | loss=0.7668
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5983 | loss=1.1013
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5983 | task=arousal
+  ► Subject 02 | AROUSAL test acc = 0.5983
+
+=================================================================
+  LOSO Fold — Test Subject: 03  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5575 | loss=0.8214
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5779 | loss=1.0052
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5779 | task=valence
+  ► Subject 03 | VALENCE test acc = 0.5779
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.2000 | loss=1.4069
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.2096 | loss=1.6496
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.2096 | task=arousal
+  ► Subject 03 | AROUSAL test acc = 0.2096
+
+=================================================================
+  LOSO Fold — Test Subject: 04  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4600 | loss=0.6036
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4238 | loss=0.9206
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.4600 | task=valence
+  ► Subject 04 | VALENCE test acc = 0.4600
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4000 | loss=0.8624
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4025 | loss=0.9528
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4025 | task=arousal
+  ► Subject 04 | AROUSAL test acc = 0.4025
+
+=================================================================
+  LOSO Fold — Test Subject: 05  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5858 | loss=1.1268
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5775 | loss=0.9235
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5858 | task=valence
+  ► Subject 05 | VALENCE test acc = 0.5858
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4746 | loss=1.1422
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4754 | loss=0.8833
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4754 | task=arousal
+  ► Subject 05 | AROUSAL test acc = 0.4754
+
+=================================================================
+  LOSO Fold — Test Subject: 06  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6950 | loss=0.7598
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.7267 | loss=0.7965
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.7267 | task=valence
+  ► Subject 06 | VALENCE test acc = 0.7267
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4708 | loss=1.2183
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5304 | loss=1.2700
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5304 | task=arousal
+  ► Subject 06 | AROUSAL test acc = 0.5304
+
+=================================================================
+  LOSO Fold — Test Subject: 07  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6917 | loss=0.6154
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5142 | loss=0.9351
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6917 | task=valence
+  ► Subject 07 | VALENCE test acc = 0.6917
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5471 | loss=0.6529
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5967 | loss=1.0996
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5967 | task=arousal
+  ► Subject 07 | AROUSAL test acc = 0.5967
+
+=================================================================
+  LOSO Fold — Test Subject: 08  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5679 | loss=1.0156
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5642 | loss=1.1084
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5679 | task=valence
+  ► Subject 08 | VALENCE test acc = 0.5679
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5033 | loss=1.0148
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5392 | loss=0.6734
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5392 | task=arousal
+  ► Subject 08 | AROUSAL test acc = 0.5392
+
+=================================================================
+  LOSO Fold — Test Subject: 09  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4950 | loss=0.8182
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5296 | loss=1.3381
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5296 | task=valence
+  ► Subject 09 | VALENCE test acc = 0.5296
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6000 | loss=1.4062
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5975 | loss=1.2669
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6000 | task=arousal
+  ► Subject 09 | AROUSAL test acc = 0.6000
+
+=================================================================
+  LOSO Fold — Test Subject: 10  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5033 | loss=0.9790
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5125 | loss=1.0917
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5125 | task=valence
+  ► Subject 10 | VALENCE test acc = 0.5125
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5542 | loss=1.5498
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5904 | loss=1.7853
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5904 | task=arousal
+  ► Subject 10 | AROUSAL test acc = 0.5904
+
+=================================================================
+  LOSO Fold — Test Subject: 11  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5933 | loss=0.9033
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4604 | loss=1.1158
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5933 | task=valence
+  ► Subject 11 | VALENCE test acc = 0.5933
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6092 | loss=1.0527
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5887 | loss=1.3644
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6092 | task=arousal
+  ► Subject 11 | AROUSAL test acc = 0.6092
+
+=================================================================
+  LOSO Fold — Test Subject: 12  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5279 | loss=0.8334
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5250 | loss=0.8564
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5279 | task=valence
+  ► Subject 12 | VALENCE test acc = 0.5279
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.8221 | loss=0.9965
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.8092 | loss=1.2585
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.8221 | task=arousal
+  ► Subject 12 | AROUSAL test acc = 0.8221
+
+=================================================================
+  LOSO Fold — Test Subject: 13  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4904 | loss=0.8551
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4050 | loss=0.9620
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.4904 | task=valence
+  ► Subject 13 | VALENCE test acc = 0.4904
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6388 | loss=0.7280
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.6483 | loss=0.8363
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.6483 | task=arousal
+  ► Subject 13 | AROUSAL test acc = 0.6483
+
+=================================================================
+  LOSO Fold — Test Subject: 14  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4971 | loss=0.9416
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5000 | loss=1.0868
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5000 | task=valence
+  ► Subject 14 | VALENCE test acc = 0.5000
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6446 | loss=1.3021
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5621 | loss=1.4570
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6446 | task=arousal
+  ► Subject 14 | AROUSAL test acc = 0.6446
+
+=================================================================
+  LOSO Fold — Test Subject: 15  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5262 | loss=1.1864
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5363 | loss=0.5314
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5363 | task=valence
+  ► Subject 15 | VALENCE test acc = 0.5363
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4713 | loss=1.1960
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4750 | loss=1.3140
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4750 | task=arousal
+  ► Subject 15 | AROUSAL test acc = 0.4750
+
+=================================================================
+  LOSO Fold — Test Subject: 16  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4429 | loss=0.8645
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4542 | loss=1.0571
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4542 | task=valence
+  ► Subject 16 | VALENCE test acc = 0.4542
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5000 | loss=1.5843
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5000 | loss=1.3419
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5000 | task=arousal
+  ► Subject 16 | AROUSAL test acc = 0.5000
+
+=================================================================
+  LOSO Fold — Test Subject: 17  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5108 | loss=1.1443
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5004 | loss=0.8320
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5108 | task=valence
+  ► Subject 17 | VALENCE test acc = 0.5108
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4963 | loss=1.1197
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4779 | loss=1.2999
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.4963 | task=arousal
+  ► Subject 17 | AROUSAL test acc = 0.4963
+
+=================================================================
+  LOSO Fold — Test Subject: 18  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5971 | loss=0.5924
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5800 | loss=1.1744
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5971 | task=valence
+  ► Subject 18 | VALENCE test acc = 0.5971
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6121 | loss=0.7321
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5358 | loss=1.5115
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6121 | task=arousal
+  ► Subject 18 | AROUSAL test acc = 0.6121
+
+=================================================================
+  LOSO Fold — Test Subject: 19  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5392 | loss=0.7397
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5521 | loss=0.8595
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5521 | task=valence
+  ► Subject 19 | VALENCE test acc = 0.5521
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6529 | loss=1.0315
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5713 | loss=1.2996
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6529 | task=arousal
+  ► Subject 19 | AROUSAL test acc = 0.6529
+
+=================================================================
+  LOSO Fold — Test Subject: 20  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4904 | loss=0.6898
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5663 | loss=1.2095
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5663 | task=valence
+  ► Subject 20 | VALENCE test acc = 0.5663
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.7758 | loss=1.3521
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5658 | loss=1.3588
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.7758 | task=arousal
+  ► Subject 20 | AROUSAL test acc = 0.7758
+
+=================================================================
+  LOSO Fold — Test Subject: 21  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5321 | loss=0.7964
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5221 | loss=0.8315
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5321 | task=valence
+  ► Subject 21 | VALENCE test acc = 0.5321
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.2062 | loss=0.8571
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.2013 | loss=0.8235
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.2062 | task=arousal
+  ► Subject 21 | AROUSAL test acc = 0.2062
+
+=================================================================
+  LOSO Fold — Test Subject: 22  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4625 | loss=0.8915
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4833 | loss=1.0023
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4833 | task=valence
+  ► Subject 22 | VALENCE test acc = 0.4833
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5896 | loss=1.4441
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5437 | loss=1.3813
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5896 | task=arousal
+  ► Subject 22 | AROUSAL test acc = 0.5896
+
+=================================================================
+  LOSO Fold — Test Subject: 23  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4904 | loss=0.9125
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4238 | loss=0.8257
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.4904 | task=valence
+  ► Subject 23 | VALENCE test acc = 0.4904
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4400 | loss=0.8318
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4846 | loss=0.7812
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4846 | task=arousal
+  ► Subject 23 | AROUSAL test acc = 0.4846
+
+=================================================================
+  LOSO Fold — Test Subject: 24  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5183 | loss=0.6850
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5188 | loss=0.8322
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5188 | task=valence
+  ► Subject 24 | VALENCE test acc = 0.5188
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6717 | loss=1.4715
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5200 | loss=1.2926
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6717 | task=arousal
+  ► Subject 24 | AROUSAL test acc = 0.6717
+
+=================================================================
+  LOSO Fold — Test Subject: 25  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4758 | loss=0.8383
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4783 | loss=0.8577
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4783 | task=valence
+  ► Subject 25 | VALENCE test acc = 0.4783
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.7246 | loss=1.4173
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.7229 | loss=1.1725
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.7246 | task=arousal
+  ► Subject 25 | AROUSAL test acc = 0.7246
+
+=================================================================
+  LOSO Fold — Test Subject: 26  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5571 | loss=0.8437
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.6062 | loss=0.7303
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.6062 | task=valence
+  ► Subject 26 | VALENCE test acc = 0.6062
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4300 | loss=1.4113
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4792 | loss=1.3595
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4792 | task=arousal
+  ► Subject 26 | AROUSAL test acc = 0.4792
+
+=================================================================
+  LOSO Fold — Test Subject: 27  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.7404 | loss=0.6153
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.7267 | loss=0.9809
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.7404 | task=valence
+  ► Subject 27 | VALENCE test acc = 0.7404
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6429 | loss=0.8178
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.6417 | loss=0.9810
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6429 | task=arousal
+  ► Subject 27 | AROUSAL test acc = 0.6429
+
+=================================================================
+  LOSO Fold — Test Subject: 28  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5717 | loss=0.7223
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5629 | loss=1.2325
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5717 | task=valence
+  ► Subject 28 | VALENCE test acc = 0.5717
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4950 | loss=0.8672
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4629 | loss=1.2106
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.4950 | task=arousal
+  ► Subject 28 | AROUSAL test acc = 0.4950
+
+=================================================================
+  LOSO Fold — Test Subject: 29  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5571 | loss=0.8132
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5625 | loss=1.1952
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.5625 | task=valence
+  ► Subject 29 | VALENCE test acc = 0.5625
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6238 | loss=1.6166
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.6200 | loss=1.4250
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6238 | task=arousal
+  ► Subject 29 | AROUSAL test acc = 0.6238
+
+=================================================================
+  LOSO Fold — Test Subject: 30  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.3608 | loss=0.9015
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4992 | loss=0.9356
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4992 | task=valence
+  ► Subject 30 | VALENCE test acc = 0.4992
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4754 | loss=1.0638
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4879 | loss=1.1248
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4879 | task=arousal
+  ► Subject 30 | AROUSAL test acc = 0.4879
+
+=================================================================
+  LOSO Fold — Test Subject: 31  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4433 | loss=0.7322
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4529 | loss=1.4364
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 737 | best_acc=0.4529 | task=valence
+  ► Subject 31 | VALENCE test acc = 0.4529
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.4750 | loss=1.4339
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.4750 | loss=1.2592
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.4750 | task=arousal
+  ► Subject 31 | AROUSAL test acc = 0.4750
+
+=================================================================
+  LOSO Fold — Test Subject: 32  (Train: 31 subjects)
+=================================================================
+  [2] Global z-score normalisation …
+  [1] Euclidean Alignment (train) …
+  [1] Euclidean Alignment (test) …
+  [3] Computing DE features …
+  Computing DE features for 74400 windows … done.
+  Computing DE features for 2400 windows … done.
+
+  [VALENCE]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.5100 | loss=0.8483
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.5092 | loss=1.1057
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.5100 | task=valence
+  ► Subject 32 | VALENCE test acc = 0.5100
+
+  [AROUSAL]  Train=74400 | Test=2400
+    Training from step 0 → 1000 | train subjects=31 | test windows=2400
+      Checkpoint saved @ step 100
+      Checkpoint saved @ step 200
+      Checkpoint saved @ step 300
+      Checkpoint saved @ step 400
+      Step    400 | val_acc=0.6750 | loss=0.7144
+      Checkpoint saved @ step 500
+      Checkpoint saved @ step 600
+      Checkpoint saved @ step 700
+      Checkpoint saved @ step 800
+      Step    800 | val_acc=0.6617 | loss=1.3994
+      Checkpoint saved @ step 900
+      Checkpoint saved @ step 1000
+  Resumed from step 337 | best_acc=0.6750 | task=arousal
+  ► Subject 32 | AROUSAL test acc = 0.6750
+
+Plot saved to /home/tanmoyhazra/rl_project_24/results/fld3qn_loso_enhanced_results.png
+
+=======================================================
+Subject         Val Acc      Aro Acc
+-------------------------------------------------------
+S01             0.4792       0.5967
+S02             0.5425       0.5983
+S03             0.5779       0.2096
+S04             0.4600       0.4025
+S05             0.5858       0.4754
+S06             0.7267       0.5304
+S07             0.6917       0.5967
+S08             0.5679       0.5392
+S09             0.5296       0.6000
+S10             0.5125       0.5904
+S11             0.5933       0.6092
+S12             0.5279       0.8221
+S13             0.4904       0.6483
+S14             0.5000       0.6446
+S15             0.5363       0.4750
+S16             0.4542       0.5000
+S17             0.5108       0.4963
+S18             0.5971       0.6121
+S19             0.5521       0.6529
+S20             0.5663       0.7758
+S21             0.5321       0.2062
+S22             0.4833       0.5896
+S23             0.4904       0.4846
+S24             0.5188       0.6717
+S25             0.4783       0.7246
+S26             0.6062       0.4792
+S27             0.7404       0.6429
+S28             0.5717       0.4950
+S29             0.5625       0.6238
+S30             0.4992       0.4879
+S31             0.4529       0.4750
+S32             0.5100       0.6750
+-------------------------------------------------------
+Mean             0.5452       0.5603
+Std              0.0702        0.1299
+=======================================================
+==========================================
+Job Finished
+==========================================
