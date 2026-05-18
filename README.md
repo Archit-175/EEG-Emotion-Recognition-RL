@@ -395,6 +395,48 @@ Goal:
 
 ---
 
+# 🗂 Project Phases
+
+## Phase 1 — DEAP Subject-Dependent Validation
+
+- **Dataset:** DEAP
+- **Approach:** Subject-dependent, FLD3QN + BiFRCNN, 10-fold CV
+- **Result:** ~88% accuracy
+- **Code:** [`phase1_deap_validation/fld3qn_subject_dependent.py`](phase1_deap_validation/fld3qn_subject_dependent.py)
+- **Results:** [`results/phase1/phase1_results.jpg`](results/phase1/phase1_results.jpg)
+
+---
+
+## Phase 2 — DEAP LOSO Baseline
+
+- **Dataset:** DEAP
+- **Approach:** Leave-One-Subject-Out (LOSO), global normalization
+- **Result:** Valence = 54.52% | Arousal = 56.03%
+- **Code:** [`phase2_deap_loso/loso_baseline.py`](phase2_deap_loso/loso_baseline.py)
+- **Results:** [`results/phase2/phase2_results.jpg`](results/phase2/phase2_results.jpg)
+
+---
+
+## Phase 2 Refined — Domain Adaptation
+
+- **Dataset:** DEAP (S03, S21 removed)
+- **Approach:** EA + CORAL + DANN + SE Attention
+- **Result:** Valence = 56.22% | Arousal = 58.78%
+- **Code:** [`phase2_refined_domain_adaptation/enhanced_domain_adaptation.py`](phase2_refined_domain_adaptation/enhanced_domain_adaptation.py)
+- **Results:** [`results/phase2_refined/enhanced_results.png`](results/phase2_refined/enhanced_results.png)
+
+---
+
+## Phase 3 — SEED-IV HARL
+
+- **Dataset:** SEED-IV
+- **Approach:** HARL + PPO adaptive weighting, 15-subject LOSO
+- **Result:** 36.03% (above 25% chance baseline)
+- **Code:** [`phase3_seediv_harl/harl_seediv.py`](phase3_seediv_harl/harl_seediv.py)
+- **Results:** [`results/seediv/seediv_results.jpg`](results/seediv/seediv_results.jpg)
+
+---
+
 # 📊 Experimental Results
 
 ## DEAP Dataset
@@ -493,36 +535,39 @@ The model performs above baseline without calibration.
 # 📁 Repository Structure
 
 ```bash
-NeuroRL/
-│
-├── data/
-│
-├── notebooks/
-│
-├── src/
-│   ├── preprocessing/
-│   │   ├── feature_extraction.py
-│   │   ├── normalization.py
-│   │   └── euclidean_alignment.py
-│   │
-│   ├── adaptation/
-│   │   ├── coral.py
-│   │   └── dann.py
-│   │
-│   ├── models/
-│   │   ├── bifrcnn.py
-│   │   ├── d3qn.py
-│   │   └── harl.py
-│   │
-│   └── train.py
-│
-├── results/
-│
-├── paper/
+EEG-Emotion-Recognition-RL/
 │
 ├── README.md
 │
-└── requirements.txt
+├── paper/
+│   ├── research_paper.pdf
+│   └── presentation.pptx
+│
+├── phase1_deap_validation/
+│   ├── fld3qn_subject_dependent.py
+│   └── training_log.out
+│
+├── phase2_deap_loso/
+│   ├── loso_baseline.py
+│   └── training_log.out
+│
+├── phase2_refined_domain_adaptation/
+│   ├── enhanced_domain_adaptation.py
+│   └── training_log.out
+│
+├── phase3_seediv_harl/
+│   ├── harl_seediv.py
+│   └── training_log.out
+│
+└── results/
+    ├── phase1/
+    │   └── phase1_results.jpg
+    ├── phase2/
+    │   └── phase2_results.jpg
+    ├── phase2_refined/
+    │   └── enhanced_results.png
+    └── seediv/
+        └── seediv_results.jpg
 ```
 
 ---
