@@ -592,7 +592,7 @@ Research implementation inspired by recent subject-independent EEG emotion recog
 
 ### 👨‍💻 Author
 
-**Archit Savaliya**
+**Divya Jaisansariya** •  **Shashank Maurya** •  **Archit Savaliya**
 
 AI Undergraduate • Reinforcement Learning • Deep Learning • Brain Computer Interfaces
 
